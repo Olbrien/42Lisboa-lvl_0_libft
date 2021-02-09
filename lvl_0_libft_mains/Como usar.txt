@@ -1,0 +1,9 @@
+Estes têm a norminette antiga. Mas os mains mantêm-se.
+
+Se fores a fazer o gcc -fsanitize=address em muitas variaveis que chamo por exemplo
+
+char temp[] = "texto";
+
+Tens que atribuir memória se não dá buffer overflow. Faz antes.
+
+char temp[500] = "texto";
