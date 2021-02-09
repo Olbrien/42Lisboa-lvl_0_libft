@@ -7,7 +7,7 @@ Dia 10/02/2021.
 
 *** Required Functions ***
 
-ft_strlen
+ft_strlen 
 ft_strlcpy
 ft_strlcat
 ft_strchr
