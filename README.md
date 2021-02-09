@@ -58,3 +58,11 @@ ft_itoa_unsigned_longlong\
 ft_strjoinchr\
 ft_pow\
 ft_itoa_longlong
+
+
+//**********************************************************//
+
+Tests used: 
+[libft-unit-test](https://github.com/alelievr/libft-unit-test)
+[Libftest](https://github.com/jtoty/Libftest)
+
