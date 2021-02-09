@@ -70,8 +70,6 @@ ft_itoa_longlong\
 **** Results ****
 
 ![GitHub Logo](/images/alelievr_libft-unit-test.png)\
-Format: ![Alt Text](url)\
-
 ![GitHub Logo](/images/jtoty_libftest.png)\
-Format: ![Alt Text](url)\
+
 
