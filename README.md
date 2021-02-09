@@ -57,11 +57,21 @@ ft_lstmap
 ft_itoa_unsigned_longlong\
 ft_strjoinchr\
 ft_pow\
-ft_itoa_longlong
-
-
+ft_itoa_longlong\
+\
+\
+\
+\
 **** Tests ****
 
 [libft-unit-test](https://github.com/alelievr/libft-unit-test)\
 [Libftest](https://github.com/jtoty/Libftest)
+
+**** Results ****
+
+![GitHub Logo](/images/alelievr_libft-unit-test.png)\
+Format: ![Alt Text](url)\
+
+![GitHub Logo](/images/jtoty_libftest.png)\
+Format: ![Alt Text](url)\
 
