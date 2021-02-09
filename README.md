@@ -59,7 +59,6 @@ ft_strjoinchr\
 ft_pow\
 ft_itoa_longlong\
 \
-\
 **** Tests ****
 
 [libft-unit-test](https://github.com/alelievr/libft-unit-test)\
