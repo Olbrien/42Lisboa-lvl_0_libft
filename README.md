@@ -1,9 +1,6 @@
 # libft
 
-
-A pasta do lvl_0_libft tem isto tudo actualizado
-Dia 10/02/2021.
-
+Last update on 10/02/2021.
 
 *** Required Functions ***
 
