@@ -5,61 +5,85 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tisantos <tisantos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/19 17:15:08 by marvin            #+#    #+#             */
-/*   Updated: 2021/02/09 03:49:00 by tisantos         ###   ########.fr       */
+/*   Created: 2021/01/04 09:33:37 by ncameiri          #+#    #+#             */
+/*   Updated: 2021/02/09 20:15:27 by tisantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	len(long nb)
+static char	*ft_reverse(char *str, int sig)
 {
-	int		len;
+	int		i;
+	int		end;
+	char	*aux;
 
-	len = 0;
-	if (nb < 0)
+	i = 0;
+	end = ft_strlen(str);
+	aux = malloc(sizeof(char) * (end + 1 + sig));
+	if (aux == NULL)
+		return (NULL);
+	if (sig)
 	{
-		nb = nb * -1;
-		len++;
+		aux[0] = '-';
+		end++;
 	}
-	while (nb > 0)
-	{
-		nb = nb / 10;
-		len++;
-	}
-	return (len);
+	while (str[i])
+		aux[--end] = str[i++];
+	free(str);
+	if (sig == 0)
+		aux[i] = '\0';
+	else
+		aux[++i] = '\0';
+	return (aux);
 }
 
-static char	*num_zero(char *str)
+static int	digits(int n)
 {
-	str[0] = 48;
-	str[1] = '\0';
-	return (str);
+	int		dig;
+
+	dig = 1;
+	if (n == (-2147483648))
+		return (dig = 12);
+	while (n > 9)
+	{
+		dig++;
+		n = n / 10;
+	}
+	return (dig);
+}
+
+static char	*min_value(char *ret)
+{
+	ret = ft_strdup("-2147483648");
+	return (ret);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	long	num;
+	char	*ret;
 	int		i;
+	int		sig;
 
-	num = n;
-	i = len(num);
-	str = (char*)malloc(sizeof(char) * (i + 2));
-	if (str == NULL)
+	sig = 0;
+	i = 0;
+	ret = malloc(sizeof(char) * (digits(n) + 1));
+	if (ret == NULL)
 		return (NULL);
-	str[i--] = '\0';
-	if (num == 0)
-		return (num_zero(str));
-	if (num < 0)
+	if (n == (-2147483648))
+		return (min_value(ret));
+	if (n < 0)
 	{
-		str[0] = '-';
-		num = num * -1;
+		n = n * (-1);
+		sig = 1;
 	}
-	while (num > 0)
+	while (n > 9)
 	{
-		str[i--] = 48 + (num % 10);
-		num = num / 10;
+		ret[i++] = (n % 10) + '0';
+		n = n / 10;
 	}
-	return (str);
+	ret[i++] = n + '0';
+	ret[i] = '\0';
+	ret = ft_reverse(ret, sig);
+	return (ret);
 }

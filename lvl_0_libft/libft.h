@@ -6,7 +6,7 @@
 /*   By: tisantos <tisantos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 18:33:47 by marvin            #+#    #+#             */
-/*   Updated: 2021/02/09 05:22:01 by tisantos         ###   ########.fr       */
+/*   Updated: 2021/02/09 22:06:00 by tisantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,8 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
+char				*ft_itoa_unsigned_longlong(unsigned long long int n);
+char				*ft_strjoinchr(char *s1, char s2);
+long long			ft_pow(int number, unsigned int power);
+char				*ft_itoa_longlong(long long n);
 #endif
