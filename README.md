@@ -1,6 +1,7 @@
 # libft
 
 Last update on 10/02/2021.
+Done with Norminette v3.
 
 *** Required Functions ***
 
