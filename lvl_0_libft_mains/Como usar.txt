@@ -1,4 +1,4 @@
-Estes têm a norminette antiga e funções antigas. Estes são mesmo só para os mains. O trabalho completo é o da pasta lvl_0_libft.
+Estes têm a norminette antiga e funções antigas. Estas funções estão desactualizadas. Usem os mains, mas as funções vejam do lvl_0_libft.
 
 Se fores a fazer o gcc -fsanitize=address em muitas variaveis que chamo por exemplo
 
