@@ -4,7 +4,7 @@ Update on 10/02/2021.\
 Done with Norminette v3.\
 \
 Last Update on 11/02/2021.\
-Changed ft_itoa in both folders.\
+Changed ft_itoa in both folders.
 
 *** Required Functions ***
 
