@@ -6,84 +6,53 @@
 /*   By: tisantos <tisantos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 09:33:37 by ncameiri          #+#    #+#             */
-/*   Updated: 2021/02/09 20:15:27 by tisantos         ###   ########.fr       */
+/*   Updated: 2021/02/11 19:08:50 by tisantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_reverse(char *str, int sig)
+static int	absolute_value(int nbr)
 {
-	int		i;
-	int		end;
-	char	*aux;
-
-	i = 0;
-	end = ft_strlen(str);
-	aux = malloc(sizeof(char) * (end + 1 + sig));
-	if (aux == NULL)
-		return (NULL);
-	if (sig)
-	{
-		aux[0] = '-';
-		end++;
-	}
-	while (str[i])
-		aux[--end] = str[i++];
-	free(str);
-	if (sig == 0)
-		aux[i] = '\0';
-	else
-		aux[++i] = '\0';
-	return (aux);
+	if (nbr < 0)
+		return (-nbr);
+	return (nbr);
 }
 
-static int	digits(int n)
+static int	get_len(int nbr)
 {
-	int		dig;
+	int	len;
 
-	dig = 1;
-	if (n == (-2147483648))
-		return (dig = 12);
-	while (n > 9)
+	len = 0;
+	if (nbr <= 0)
+		++len;
+	while (nbr != 0)
 	{
-		dig++;
-		n = n / 10;
+		++len;
+		nbr = nbr / 10;
 	}
-	return (dig);
-}
-
-static char	*min_value(char *ret)
-{
-	ret = ft_strdup("-2147483648");
-	return (ret);
+	return (len);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*ret;
-	int		i;
-	int		sig;
+	char	*result;
+	int		len;
 
-	sig = 0;
-	i = 0;
-	ret = malloc(sizeof(char) * (digits(n) + 1));
-	if (ret == NULL)
+	len = get_len(n);
+	result = malloc(sizeof(char) * (len + 1));
+	if (result == NULL)
 		return (NULL);
-	if (n == (-2147483648))
-		return (min_value(ret));
+	result[len] = '\0';
 	if (n < 0)
+		result[0] = '-';
+	else if (n == 0)
+		result[0] = '0';
+	while (n != 0)
 	{
-		n = n * (-1);
-		sig = 1;
-	}
-	while (n > 9)
-	{
-		ret[i++] = (n % 10) + '0';
+		--len;
+		result[len] = absolute_value(n % 10) + '0';
 		n = n / 10;
 	}
-	ret[i++] = n + '0';
-	ret[i] = '\0';
-	ret = ft_reverse(ret, sig);
-	return (ret);
+	return (result);
 }
