@@ -6,7 +6,7 @@ Added .pdf\
 Changed README.md structure.\
 
 ###### <i>Old Update on 10/02/2021.</i>
-Done with Norminette v3.\
+Done with Norminette v3.
 
 *** Required Functions ***
 <pre>
