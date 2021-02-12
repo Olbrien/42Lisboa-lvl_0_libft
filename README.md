@@ -1,11 +1,11 @@
 # libft
 
-Update on 10/02/2021.\
+<i>Update on 10/02/2021.</i>\
 Done with Norminette v3.\
 \
-Last Update on 11/02/2021.\
+<i>Last Update on 11/02/2021.</i>\
 Changed ft_itoa in both folders.\
-Added .pdf.\
+Added .pdf\
 Changed README.md structure.\
 
 *** Required Functions ***
