@@ -3,7 +3,7 @@
 ###### <i>Recent Update on 11/02/2021.</i>
 Changed ft_itoa in both folders.\
 Added .pdf\
-Changed README.md structure.\
+Changed README.md structure.
 
 ###### <i>Old Update on 10/02/2021.</i>
 Done with Norminette v3.
