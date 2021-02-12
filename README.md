@@ -9,7 +9,7 @@ Added .pdf.
 Changed README.md structure.
 
 *** Required Functions ***
-
+<pre>
 ft_strlen  ft_strlcpy   ft_strlcat\
 ft_strchr   ft_strrchr    ft_strnstr\
 ft_strncmp    ft_atoi   ft_isalpha\
@@ -22,20 +22,18 @@ ft_substr   ft_strjoin    ft_strtrim\
 ft_split    ft_itoa   ft_strmapi\
 ft_putchar_fd   ft_putstr_fd    ft_putendl_fd\
 ft_putnbr_fd    ft_lstmap
-
+</pre>
 *** Bonus Functions ***
-
+<pre>
 ft_lstnew   ft_lstadd_front   ft_lstsize\
 ft_lstlast    ft_lstadd_back    ft_lstdelone\
 ft_lstclear   ft_lstiter    ft_lstmap
-
+</pre>
 **** My Additions ****
-
-ft_itoa_unsigned_longlong\
-ft_strjoinchr\
-ft_pow\
-ft_itoa_longlong\
-\
+<pre>
+ft_itoa_unsigned_longlong   ft_strjoinchr\
+ft_pow    ft_itoa_longlong\
+</pre>
 **** Tests ****
 
 [libft-unit-test](https://github.com/alelievr/libft-unit-test)\
