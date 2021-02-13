@@ -1,6 +1,9 @@
 # libft
 
-###### <i>Recent Update on 11/02/2021.</i>
+###### <i>Recent Update on 13/02/2021.</i>
+Added lvl_0_libft_old_norm.
+
+###### <i>Old Update on 11/02/2021.</i>
 Changed ft_itoa in both folders.\
 Added .pdf\
 Changed README.md structure.
