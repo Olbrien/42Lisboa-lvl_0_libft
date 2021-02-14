@@ -44,7 +44,7 @@ ft_itoa_longlong                  ft_pow
 
 **** Results ****
 
-![GitHub Logo](/images/alelievr_libft-unit-test.png)\
-![GitHub Logo](/images/jtoty_libftest.png)\
+![GitHub Logo](/extras/images/alelievr_libft-unit-test.png)\
+![GitHub Logo](/extras/images/jtoty_libftest.png)\
 
 
