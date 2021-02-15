@@ -3,7 +3,7 @@
 ###### <i>Recent Update on 15/02/2021.</i>
 Changed ft_split.c.
 
-###### <i>Update on 13/02/2021.</i>
+###### <i>Old Update on 13/02/2021.</i>
 Added lvl_0_libft_old_norm.
 
 ###### <i>Old Update on 11/02/2021.</i>
