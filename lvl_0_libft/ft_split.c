@@ -5,113 +5,54 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tisantos <tisantos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/08 15:59:52 by marvin            #+#    #+#             */
-/*   Updated: 2021/02/09 04:21:30 by tisantos         ###   ########.fr       */
+/*   Created: 2020/11/09 09:05:46 by tisantos          #+#    #+#             */
+/*   Updated: 2021/02/15 12:07:33 by tisantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	**freearray(char **array)
+static size_t	get_length(const char *s, char c)
 {
-	int	i;
+	int count;
 
-	i = 0;
-	while (array[i])
-	{
-		free(array[i]);
-		i++;
-	}
-	free(array);
-	return (NULL);
-}
-
-static int	startcopyingfromhere(char const *s, char c, int start)
-{
-	int	i;
-	int	count;
-
-	i = 0;
 	count = 0;
-	if (start == 0)
-		return (0);
-	while (s[i] != '\0' && count != start)
+	while (*s)
 	{
-		if (s[i] == c && s[i + 1] != c && s[i + 1] != '\0' && i != 0)
-			count++;
-		i++;
-	}
-	return (i);
-}
-
-static char	*ignorechar(char const *s, char c, int ignore)
-{
-	int		startlocation;
-	int		i;
-	char	*here;
-	int		v;
-
-	here = malloc(ft_strlen(s) * sizeof(char));
-	if (here == NULL)
-		return (NULL);
-	v = 0;
-	startlocation = startcopyingfromhere(s, c, ignore);
-	i = startlocation;
-	if (startlocation == 0 && s[i] == c && s[i + 1] != '\0' && s[i + 1] != c)
-	{
-		i++;
-		while (s[i] != '\0' && s[i] != c)
-			here[v++] = s[i++];
-	}
-	else
-	{
-		while (s[i] != '\0' && s[i] != c)
-			here[v++] = s[i++];
-	}
-	here[v] = '\0';
-	return (here);
-}
-
-static int	arraysize(char const *s, char c)
-{
-	int	i;
-	int	count;
-
-	i = 0;
-	count = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == c && s[i + 1] != c && s[i + 1] != '\0' && i != 0)
-			count++;
-		i++;
+		if (*s++ == c)
+			continue ;
+		count++;
+		while (*s && *s != c)
+			s++;
 	}
 	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
-	char	**array;
-	char	*temp;
-	int		i;
-	int		b;
+	char	**strs;
+	char	**sav_strs;
+	char	*sav_s;
 
-	temp = (char *)s;
-	i = 0;
-	b = 0;
 	if (!s)
-		return (NULL);
-	array = (char **)malloc((arraysize(s, c) + 2) * sizeof(char *));
-	if (array == NULL)
-		return (NULL);
-	while (i < arraysize(s, c) + 1)
+		return (0);
+	if (!(strs = malloc((get_length(s, c) + 1) * sizeof(char *))))
+		return (0);
+	sav_strs = strs;
+	while (*s)
 	{
-		temp = ignorechar(s, c, i++);
-		if (temp == NULL)
-			return (freearray(array));
-		if (temp[0] == '\0')
+		if (*s == c)
+		{
+			s++;
 			continue ;
-		array[b++] = temp;
+		}
+		sav_s = (char *)s;
+		while (*s && *s != c)
+			s++;
+		if (!(*strs = malloc((s - sav_s + 1) * sizeof(char))))
+			return (0);
+		ft_strlcpy(*strs++, sav_s, s - sav_s + 1);
 	}
-	array[b] = NULL;
-	return (array);
+	*strs = 0;
+	return (sav_strs);
 }
