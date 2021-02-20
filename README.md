@@ -1,5 +1,9 @@
 # libft
 
+###### <i>Recent Update on 16/02/2021.</i>
+Finished project.\
+All files delivered with Old Norminette.
+
 ###### <i>Recent Update on 15/02/2021.</i>
 Changed ft_split.c.
 
