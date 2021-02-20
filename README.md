@@ -1,5 +1,7 @@
 # libft
 
+![GitHub Logo](/extras/images/Success.png)\
+
 ###### <i>Recent Update on 16/02/2021.</i>
 Finished project.\
 All files delivered with Old Norminette.
