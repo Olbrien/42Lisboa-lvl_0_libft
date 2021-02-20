@@ -1,9 +1,0 @@
-Estes têm a norminette antiga e funções antigas. Estas funções estão desactualizadas. Usem os mains, mas as funções vejam do lvl_0_libft.
-
-Se fores a fazer o gcc -fsanitize=address em muitas variaveis que chamo por exemplo
-
-char temp[] = "texto";
-
-Tens que atribuir memória se não dá buffer overflow. Faz antes.
-
-char temp[500] = "texto";
