@@ -6,7 +6,7 @@
 /*   By: tisantos <tisantos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 18:33:47 by marvin            #+#    #+#             */
-/*   Updated: 2021/02/09 22:06:00 by tisantos         ###   ########.fr       */
+/*   Updated: 2021/04/19 00:18:41 by tisantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,20 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}					t_list;
+}				t_list;
+
+typedef struct s_split
+{
+	int				i;
+	int				j;
+	int				start;
+	char			**big_new;
+	char			*temp;
+}				t_split;
 
 size_t				ft_strlen(const char *s);
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
@@ -71,4 +80,7 @@ char				*ft_itoa_unsigned_longlong(unsigned long long int n);
 char				*ft_strjoinchr(char *s1, char s2);
 long long			ft_pow(int number, unsigned int power);
 char				*ft_itoa_longlong(long long n);
+char				**ft_split_chars(char const *s, const char *delimiters);
+int					ft_strcmp(char *s1, char *s2);
+void				free_array(char **array, int count);
 #endif

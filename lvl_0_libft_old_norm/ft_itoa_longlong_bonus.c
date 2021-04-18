@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static void		ft_itoa_minus(long long *n, long long *minus, long long *temp)
+static void	ft_itoa_minus(long long *n, long long *minus, long long *temp)
 {
 	if (*n == -9223372036854775807 - 1)
 	{
@@ -34,7 +34,7 @@ static void		ft_itoa_minus(long long *n, long long *minus, long long *temp)
 	}
 }
 
-static int		ft_itoa_len(long long n)
+static int	ft_itoa_len(long long n)
 {
 	long long int			len;
 
@@ -48,7 +48,7 @@ static int		ft_itoa_len(long long n)
 	return (len);
 }
 
-static void		ft_itoa_write(char *finish, long long len,
+static void	ft_itoa_write(char *finish, long long len,
 								long long n, long long temp)
 {
 	while (n > 9)
@@ -60,7 +60,7 @@ static void		ft_itoa_write(char *finish, long long len,
 	finish[len] = n + '0';
 }
 
-char			*ft_itoa_longlong(long long n)
+char	*ft_itoa_longlong(long long n)
 {
 	long long				minus;
 	long long				temp;
