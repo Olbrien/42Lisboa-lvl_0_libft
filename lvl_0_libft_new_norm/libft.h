@@ -6,7 +6,7 @@
 /*   By: tisantos <tisantos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 18:33:47 by marvin            #+#    #+#             */
-/*   Updated: 2021/02/20 13:37:47 by tisantos         ###   ########.fr       */
+/*   Updated: 2021/04/19 00:18:41 by tisantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,4 +80,7 @@ char				*ft_itoa_unsigned_longlong(unsigned long long int n);
 char				*ft_strjoinchr(char *s1, char s2);
 long long			ft_pow(int number, unsigned int power);
 char				*ft_itoa_longlong(long long n);
+char				**ft_split_chars(char const *s, const char *delimiters);
+int					ft_strcmp(char *s1, char *s2);
+void				free_array(char **array, int count);
 #endif
