@@ -18,11 +18,11 @@
 ###### <i>Old Update on 10/02/2021.</i>
 • Done with Norminette v3.
 
-## Subject
+## Subject:
 
 You can find the subject of this project [here.](https://github.com/Olbrien/42Lisboa-lvl_0_libft/blob/main/extras/lvl_0_libft.subject.pdf)
 
-## Required Functions
+## Required Functions:
 <pre>
 ft_strlen       ft_strlcpy        ft_strlcat
 ft_strchr       ft_strrchr        ft_strnstr
@@ -37,23 +37,23 @@ ft_split        ft_itoa           ft_strmapi
 ft_putchar_fd   ft_putstr_fd      ft_putendl_fd
 ft_putnbr_fd    ft_lstmap
 </pre>
-## Bonus Functions
+## Bonus Functions:
 <pre>
 ft_lstnew       ft_lstadd_front   ft_lstsize
 ft_lstlast      ft_lstadd_back    ft_lstdelone
 ft_lstclear     ft_lstiter        ft_lstmap
 </pre> 
-## My Additions
+## My Additions:
 <pre>
 ft_itoa_unsigned_longlong         ft_strjoinchr
 ft_itoa_longlong                  ft_pow
 </pre>
-## Tests
+## Tests:
 
 [libft-unit-test](https://github.com/alelievr/libft-unit-test)\
 [Libftest](https://github.com/jtoty/Libftest)
 
-## Results
+## Results:
 
 ![GitHub Logo](/extras/images/alelievr_libft-unit-test.png)\
 ![GitHub Logo](/extras/images/jtoty_libftest.png)\
