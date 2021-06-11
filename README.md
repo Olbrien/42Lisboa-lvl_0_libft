@@ -18,6 +18,10 @@
 ###### <i>Old Update on 10/02/2021.</i>
 • Done with Norminette v3.
 
+## Subject
+
+You can find the subject of this project [here.](https://github.com/Olbrien/42Lisboa-lvl_0_libft/blob/main/extras/lvl_0_libft.subject.pdf)
+
 ## Required Functions
 <pre>
 ft_strlen       ft_strlcpy        ft_strlcat
